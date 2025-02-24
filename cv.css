@@ -1,0 +1,140 @@
+body {
+  margin: auto;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  background-color: lightgray;
+}
+
+.main_menu {
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+
+  background-image: url(images/vadringjag.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.main_menu h2 {
+  color: white;
+  padding: 10px;
+}
+
+.main_menu ul {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main_menu a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  transition: bakground 0.3s;
+  -webkit-transition: bakground 0.3s;
+  -moz-transition: bakground 0.3s;
+  -ms-transition: bakground 0.3s;
+  -o-transition: bakground 0.3s;
+}
+
+.main_menu a:hover {
+  background: rgb(208, 224, 219);
+  color: black;
+}
+@media (max: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* -----*/
+
+.cv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+
+  max-width: 800px; /*maxbredd för text layouten*/
+  margin: auto; /*auto centerar texten*/
+  padding: 20px;
+}
+
+.cv-content {
+  flex: 2;
+}
+
+.cv-image {
+  width: 100%;
+  text-align: center;
+}
+
+.cv-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+h1 {
+  margin: auto;
+  padding: 30px;
+}
+
+.edu-text,
+.exp-text {
+  display: flex; /*arrangerar datum och information på samma rad*/
+  margin-bottom: 15px; /*mellanrum mellan poster */
+  padding-bottom: 10px; /*extra utrymme under varje post*/
+
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.edu-date,
+.exp-date {
+  text-align: left; /*justerar texten till höger*/
+  color: #555;
+}
+
+.edu-info,
+.exp-info {
+  padding-left: 30px;
+  color: #555;
+}
+
+.merits {
+  flex: 1;
+  align-self: flex-start;
+  padding: 20px;
+  color: #333;
+}
+
+.merits h3 {
+  margin-left: 50px;
+}
+
+.mer-info {
+  list-style-type: none;
+  margin: 20px;
+}
+
+h3,
+h4 {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.cv * {
+  word-wrap: break-word; /**/
+}

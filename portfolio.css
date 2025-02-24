@@ -1,0 +1,179 @@
+body {
+  margin: auto;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  background-color: lightgray;
+}
+
+.main_menu {
+  text-align: center;
+  padding-top: 10px;
+  background-image: url(images/vadringjag.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.main_menu h2 {
+  color: white;
+  padding: 10px;
+}
+
+.main_menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0%;
+}
+.main_menu a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  transition: bakground 0.3s;
+  -webkit-transition: bakground 0.3s;
+  -moz-transition: bakground 0.3s;
+  -ms-transition: bakground 0.3s;
+  -o-transition: bakground 0.3s;
+}
+
+/* hover parten, dont touch */
+.main_menu a:hover {
+  background: rgb(208, 224, 219);
+  color: black;
+}
+
+.container {
+  /*margin: auto; */
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container h2 {
+  color: dimgrey;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%; /*automatisk läge som fyller sin container*/
+  max-width: 200px; /*sätter en max bredd på bilder*/
+  border-radius: 10px; /*rundar till hörnen*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+}
+h3 {
+  color: #555;
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px 0;
+  width: 80%;
+  padding: 20px;
+  max-width: 600px;
+}
+
+label {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
+.project a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: cadetblue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 60px;
+}
+
+.modal-content {
+  background: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+
+  width: 80%;
+  max-width: 600px;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); */
+}
+
+input[type="checkbox"]:checked + .modal {
+  display: block;
+}
+
+.close-btn {
+  /*stäng knappen*/
+  color: aquamarine;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: blueviolet;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .modal-close {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  color: darkslateblue;
+} */
+
+/* för andra kärmar, kom ihåg att ha med de i alla css */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,123 @@
+body {
+  margin: auto;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  background-color: lightgray;
+}
+
+.main_menu {
+  text-align: center;
+  padding-top: 10px;
+  background-image: url(images/vadringjag.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.main_menu h2 {
+  color: white;
+  padding: 10px;
+}
+
+.main_menu ul {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.main_menu li {
+  position: relative;
+}
+
+.main_menu a {
+  text-decoration: none;
+  float: none;
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  transition: bakground 0.3s;
+  -webkit-transition: bakground 0.3s;
+  -moz-transition: bakground 0.3s;
+  -ms-transition: bakground 0.3s;
+  -o-transition: bakground 0.3s;
+}
+
+/* hover parten, dont touch */
+.main_menu a:hover {
+  background: rgb(208, 224, 219);
+  color: black;
+}
+
+.container {
+  /*margin: auto; */
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container h2 {
+  color: dimgrey;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%; /*automatisk läge som fyller sin container*/
+  max-width: 200px; /*sätter en max bredd på bilder*/
+  border-radius: 10px; /*rundar till hörnen*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.introduction {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+h2,
+h3 {
+  margin: auto;
+  padding: 20px;
+  color: #333;
+}
+
+p {
+  margin: auto;
+  max-width: 800px;
+}
+
+.part2 {
+  text-align: center;
+}
+
+h4 {
+  color: #555;
+}
+
+footer {
+  color: #333;
+  text-align: center;
+  padding-top: 100px;
+}
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}

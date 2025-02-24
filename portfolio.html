@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main_menu">
+        <h2>Portfolio</h2>
+        <ul>
+          <li><a href="index1.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="cv.html">Curriculum Vitae</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="portfolio">
+        <!-- portfolio del -->
+
+        <h1>Projects</h1>
+        <!-- projekt del1 -->
+        <div class="project">
+          <h3>Fictive School</h3>
+
+          <p>
+            This project involves creating a database for a fictive school and
+            using C# to build a system for adding and searching for people in
+            the database.
+          </p>
+          <button onclick="document.getElementById('modal1').checked = true;">
+            View More">
+          </button>
+          <a href="https://github.com/theMargarita/Individual_Database_project"
+            >GitHub</a
+          >
+          <!-- modal poup -->
+          <input type="checkbox" id="modal1" />
+          <div class="modal">
+            <div class="modal-content">
+              <span
+                class="close-btn"
+                onclick="document.getElementById('modal1').checked = false;"
+                >&times;</span
+              >
+              <h2>Fictive School</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Explicabo quo esse libero laudantium voluptatibus blanditiis.
+                Dolorum similique eius expedita quam et laudantium. Sed incidunt
+                praesentium aspernatur, perspiciatis at velit molestias?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- projekt 2 -->
+        <div class="project">
+          <h3>Numbers Game</h3>
+
+          <p>A numbers game made in visual studio for a school project.</p>
+          <button onclick="document.getElementById('modal2').checked = true;">
+            View More">
+          </button>
+          <a href="https://github.com/theMargarita/NumbersGame">GitHub</a>
+          <!-- modal popup -->
+          <input type="checkbox" id="modal2" />
+          <div class="modal">
+            <div class="modal-content">
+              <span
+                class="close-btn"
+                onclick="document.getElementById('modal2').checked = false;"
+                >&times;</span
+              >
+              <h2>Numbers Game</h2>
+              <p>
+                A number game where you guess the number and you have 5 moves to
+                guess right, else you loose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Margarita Voistinova</p>
+    </footer>
+  </body>
+</html>
