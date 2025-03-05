@@ -3,11 +3,14 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   background-color: lightgray;
+  /* flex-wrap: wrap; */
 }
 
 .main_menu {
   text-align: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  position: relative;
+  /* flex-wrap: wrap; */
   background-image: url(images/vadringjag.jpg);
   background-size: cover;
   background-position: center;
@@ -24,11 +27,9 @@ body {
   padding: 0%;
   margin: 0%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-}
-.main_menu li {
-  position: relative;
 }
 
 .main_menu a {
@@ -51,8 +52,13 @@ body {
   color: black;
 }
 
+.main_menu img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  /*margin: auto; */
+  margin: auto;
   padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -76,13 +82,6 @@ img {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .introduction {
@@ -114,10 +113,17 @@ h4 {
 footer {
   color: #333;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 100%;
 }
 footer p {
   font-size: 1.1rem;
   margin-bottom: 10px;
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 }

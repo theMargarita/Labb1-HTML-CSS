@@ -1,17 +1,21 @@
 body {
-  margin: auto;
+  margin: 0 auto;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-  background-color: lightgray;
+  background-color: lightgrey;
+  /* flex-wrap: wrap; */
+  display: flexbox;
 }
 
 .main_menu {
   text-align: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  position: relative;
   background-image: url(images/vadringjag.jpg);
   background-size: cover;
   background-position: center;
-  padding: 120px 0;
+  padding: 100px 0;
+  flex-wrap: wrap;
 }
 
 .main_menu h2 {
@@ -21,13 +25,19 @@ body {
 
 .main_menu ul {
   list-style: none;
+  padding: 0%;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0%;
+
+  /* padding: 10%; */
 }
+
 .main_menu a {
   text-decoration: none;
+  float: none;
   padding: 10px 20px;
   display: inline-block;
   color: white;
@@ -46,8 +56,9 @@ body {
 }
 
 .container {
-  /*margin: auto; */
+  margin: auto;
   padding: 20px;
+  text-align: center;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -56,7 +67,7 @@ body {
 }
 
 .container h2 {
-  color: dimgrey;
+  color: #333;
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
@@ -77,100 +88,114 @@ h1 {
   color: #333;
   text-align: center;
 }
-h3 {
-  color: #555;
-  width: 100%;
-  text-align: center;
+dialog {
+  padding: 1rem 3rem;
+  background: rgb(174, 206, 243);
+  max-width: 400px;
+  padding-top: 2rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: 0;
+  /* box-shadow: 0 5px 30px 0 rgba(161, 25, 25, 0.1); */
+  animation: fadeIn 1s ease both;
+  -webkit-animation: fadeIn 1s ease both;
+  &::backdrop {
+    animation: fadeIn 1s ease both;
+    -webkit-animation: fadeIn 1s ease both;
+    background: rgb(255 255 255 / 40%);
+    z-index: 2;
+    backdrop-filter: blur(20px);
+  }
+  .x {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    transition: ease filter, transform 0.3s;
+    -webkit-transition: ease filter, transform 0.3s;
+    -moz-transition: ease filter, transform 0.3s;
+    -ms-transition: ease filter, transform 0.3s;
+    -o-transition: ease filter, transform 0.3s;
+
+    cursor: pointer;
+    transform-origin: center;
+    &:hover {
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+      transition: scale(1.1);
+      -webkit-transition: scale(1.1);
+      -moz-transition: scale(1.1);
+      -ms-transition: scale(1.1);
+      -o-transition: scale(1.1);
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 0.5rem 0;
+    margin-bottom: 20px;
+    a {
+      &:visited {
+        color: rgb(var(--vs-primary)); /*visar bakgrudnen i en blurr*/
+      }
+    }
+  }
 }
 
-.portfolio {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-}
+button.button {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: cadetblue;
+  color: rgb(var(--vs-primary)) olet;
+  padding: 13px 25px;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  -ms-border-radius: 17px;
+  -o-border-radius: 17px;
 
-.project {
-  text-align: center;
-  margin: auto;
-  margin-bottom: 50px 0;
-  width: 80%;
-  padding: 20px;
-  max-width: 600px;
-}
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
 
-label {
+  box-sizing: border-box;
+  border: 0;
   cursor: pointer;
-  color: black;
-  text-decoration: underline;
+  box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 100%);
+  &:hover {
+    box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+    transform: translate(-5px);
+    -webkit-transform: translate(-5px);
+    -moz-transform: translate(-5px);
+    -ms-transform: translate(-5px);
+    -o-transform: translate(-5px);
+  }
 }
 
-.project a {
-  display: block;
-  margin-top: 10px;
-  text-decoration: none;
-  background: cadetblue;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* justify-content: center; */
-  align-items: center;
-  padding-top: 60px;
-}
-
-.modal-content {
-  background: white;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-
-  width: 80%;
-  max-width: 600px;
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); */
-}
-
-input[type="checkbox"]:checked + .modal {
-  display: block;
-}
-
-.close-btn {
-  /*stäng knappen*/
-  color: aquamarine;
+.x {
+  color: rgb(148, 12, 12);
   float: right;
-  font-size: 28px;
+  font-size: 15px;
   font-weight: bold;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  color: blueviolet;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* .modal-close {
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: underline;
-  color: darkslateblue;
-} */
-
-/* för andra kärmar, kom ihåg att ha med de i alla css */
 @media (max-width: 768px) {
   main {
     flex-direction: column;

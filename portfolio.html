@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <link
@@ -26,64 +26,68 @@
     </header>
 
     <main>
-      <section class="portfolio">
-        <!-- portfolio del -->
-
+      <section>
         <h1>Projects</h1>
         <!-- projekt del1 -->
-        <div class="project">
-          <h3>Fictive School</h3>
+        <div class="container">
+          <h2>Fictive School</h2>
 
           <p>
-            This project involves creating a database for a fictive school and
-            using C# to build a system for adding and searching for people in
-            the database.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Explicabo quo esse libero laudantium voluptatibus blanditiis.
+            Dolorum similique eius expedita quam et laudantium. Sed incidunt
+            praesentium aspernatur, perspiciatis at velit molestias?
           </p>
-          <button onclick="document.getElementById('modal1').checked = true;">
-            View More">
+          <button class="button" onclick="document.getElementById('dialogOne').showModal();">
+            More info
           </button>
-          <a href="https://github.com/theMargarita/Individual_Database_project"
-            >GitHub</a
-          >
-          <!-- modal poup -->
-          <input type="checkbox" id="modal1" />
-          <div class="modal">
-            <div class="modal-content">
-              <span
-                class="close-btn"
-                onclick="document.getElementById('modal1').checked = false;"
-                >&times;</span
-              >
-              <h2>Fictive School</h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Explicabo quo esse libero laudantium voluptatibus blanditiis.
-                Dolorum similique eius expedita quam et laudantium. Sed incidunt
-                praesentium aspernatur, perspiciatis at velit molestias?
-              </p>
+
+          <dialog id="dialogOne">
+            <p>
+              This project involves creating a database for a fictive school and
+              using C# to build a system for adding and searching for people in
+              the database.
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
+                target="_blank"
+                ::backdrop
+              ></a>
+           
+            </p>
+          <button onclick="document.getElementById('dialogOne').close();" aria-label="close" class="x"> X </button>
+</dialog>
+
+          <p>
+            <a href="https://github.com/theMargarita/Individual_Database_project"
+            >GitHub</a>
+          </p>
             </div>
           </div>
         </div>
 
         <!-- projekt 2 -->
-        <div class="project">
-          <h3>Numbers Game</h3>
+        <div class="container">
+          <h2>Numbers Game</h2>
 
           <p>A numbers game made in visual studio for a school project.</p>
-          <button onclick="document.getElementById('modal2').checked = true;">
-            View More">
+
+          <button class="button" onclick="document.getElementById('dialogTwo').showModal();">
+            More info
           </button>
-          <a href="https://github.com/theMargarita/NumbersGame">GitHub</a>
-          <!-- modal popup -->
-          <input type="checkbox" id="modal2" />
-          <div class="modal">
-            <div class="modal-content">
-              <span
-                class="close-btn"
-                onclick="document.getElementById('modal2').checked = false;"
-                >&times;</span
-              >
-              <h2>Numbers Game</h2>
+
+          <dialog id="dialogTwo">
+            <p>
+              This project involves creating a database for a fictive school and
+              using C# to build a system for adding and searching for people in
+              the database.
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
+                target="_blank"
+                ::backdrop
+              ></a>
+            </p> <button onclick="document.getElementById('dialogTwo').close();" aria-label="close" class="x">X</button> 
+</dialog>
+          <p><a href="https://github.com/theMargarita/NumbersGame">GitHub</a></p>
               <p>
                 A number game where you guess the number and you have 5 moves to
                 guess right, else you loose.
