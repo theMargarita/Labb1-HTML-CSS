@@ -1,0 +1,69 @@
+{
+  "workExperience": [
+    {
+      "title": "Waste Mangement Worker",
+      "company": "Risängen",
+      "place": "Skövde, Sweden",
+      "date": "2024-04 - 2024-08",
+      "info": "As a recycling worker, I am responsible for sorting, processing and managing recycclable materials to ensure proper waste disposal and enviormental sustainability",
+      "merits": [
+        "Teamwork skills",
+        "Environmental awareness",
+        "Costomer-Oriented",
+        "Safety compliance",
+        "Physical stamina"
+      ]
+    },
+    {
+      "title": "Postal Carrier",
+      "company": "Postnord",
+      "place": "Hamlstad/Hjo/Skövde, Sweden",
+      "date": "2022-06 - 2024-03",
+      "info": " As a postal carrier at Postnord, I was responsible for delivering mail and packages to customers, ensuring timely and accurate delivery while maintaining excellent customer service.",
+      "merits": [
+        "Costomer Service",
+        "Problem-solving skills",
+        "Time management"
+      ]
+    },
+    {
+      "title": "Gatekeeper",
+      "company": "Stora Enso/Securitas",
+      "place": "Hyltebruk, Sweden",
+      "date": "2019-05 - 2021-06",
+      "info": " As a gatekeeper at Stora Enso, I was responsible for controlling access to the facility, ensuring that only authorized personnel and vendors entered the premises. I maintained security protocols, managed visitor check-ins, and contributed to the overall safety and efficiency of the operations.",
+      "merits": [
+        "Customer service & communication",
+        "Administrative tasks",
+        "Work under pressure",
+        "Problem-solving & quick decision-making",
+        "Collaboration with law enforcement & emergency services"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "program": "System Developer.NET",
+      "school": "Varberg Campus",
+      "place": "Varberg, Sweden",
+      "date": "2024 - now"
+    },
+    {
+      "program": "Engineering Preparatory Year",
+      "school": "Halmstad Högskola",
+      "place": "Halmstad, Sweden",
+      "date": "2021 - 2022"
+    },
+    {
+      "program": "Health and Scoial Care",
+      "school": "Sture Gymnasium",
+      "place": "Halmstad, Sweden",
+      "date": "2014 - 2017"
+    }
+  ],
+  "skills": [
+    {
+      "otherskills": ["Microsoft 365", "Driving license", "Vasa Loppet"]
+    }
+  ]
+}

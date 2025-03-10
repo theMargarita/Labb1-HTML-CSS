@@ -50,26 +50,30 @@ body {
 }
 
 .cv {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  justify-content: space-around;
   align-items: flex-start;
-  gap: 40px;
-
-  max-width: 800px; /*maxbredd för text layouten*/
+  /* gap: initial; */
+  /* text-align: initial; */
+  /* position: sticky; */
+  max-width: 900px; /*maxbredd för text layouten*/
   margin: auto; /*auto centerar texten*/
-  padding: 20px;
+  padding: 30px;
 }
 
 .cv-content {
   flex: 2;
+  padding: 30px;
+  margin: auto;
+  display: flex;
 }
 
-.cv-image {
+/* .cv-image {
   width: 100%;
   text-align: center;
-}
+} */
 
-.cv-image img {
+/* .cv-image img {
   max-width: 100%;
   max-width: 200px;
   height: auto;
@@ -78,54 +82,11 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
+} */
 
 h1 {
   margin: auto;
   padding: 30px;
-  text-align: center;
-}
-
-.edu-text,
-.exp-text {
-  display: flex; /*arrangerar datum och information på samma rad*/
-  margin-bottom: 15px; /*mellanrum mellan poster */
-  padding-bottom: 10px; /*extra utrymme under varje post*/
-
-  flex-direction: column;
-  align-items: center;
-}
-
-.edu-date,
-.exp-date {
-  text-align: left; /*justerar texten till vänster*/
-  color: #555;
-  text-align: center;
-}
-
-.edu-info,
-.exp-info {
-  padding-left: 30px;
-  color: #555;
-  text-align: center;
-}
-
-.merits {
-  flex: 1;
-  align-self: flex-start;
-  padding: 20px;
-  color: #333;
-  text-align: center;
-}
-
-.merits h3 {
-  margin-left: 50px;
-  color: black;
-}
-
-.mer-info {
-  list-style-type: none;
-  margin: 20px;
   text-align: center;
 }
 
@@ -135,12 +96,11 @@ h4 {
   margin: 5px 0;
   color: #333;
 }
-
-/* footer p {
-  font-size: 1.1rem;
-  margin-bottom: 10%;
-  opacity: 0.8;
-} */
+h5 {
+  margin: auto;
+  padding: 5px;
+  color: #555;
+}
 
 .cv * {
   word-wrap: break-word;
