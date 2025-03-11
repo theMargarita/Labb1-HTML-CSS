@@ -1,5 +1,6 @@
-let container = document.querySelector(".eggContainer");
+const closeBTN = document.querySelector(".closeBTN");
 
+let container = document.querySelector(".eggContainer");
 container.addEventListener("click", () => {
   document.querySelector(".top").style.top = "-100px";
 });
@@ -24,19 +25,22 @@ container.addEventListener =
 
 function showPopup() {
   document.getElementById("eggPopup").classList.add("show");
-  console.log("Popup opened! Inintializing 3D Egg");
-
-  if (!scene) {
-    init3DEgg();
-  }
 }
 
 function closePopup() {
   document.getElementById("eggPopup").classList.remove("show");
 }
 
-document.addEventListener("keydown", function (event) {
-  if (event.key.toLowerCase() === "e") {
-    showPopup();
-  }
+// document.addEventListener("keydown", function (event) {
+//   if (event.key.toLowerCase() === "e") {
+//     showPopup();
+//   }
+// });
+
+document.addEventListener("click", function (event) {
+  showPopup();
+});
+
+closeBTN.addEventListener("click", () => {
+  closePopup();
 });

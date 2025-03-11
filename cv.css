@@ -50,15 +50,12 @@ body {
 }
 
 .cv {
-  /* display: flex; */
   justify-content: space-around;
   align-items: flex-start;
-  /* gap: initial; */
-  /* text-align: initial; */
-  /* position: sticky; */
   max-width: 900px; /*maxbredd för text layouten*/
   margin: auto; /*auto centerar texten*/
   padding: 30px;
+  /* grid-row: 2; */
 }
 
 .cv-content {

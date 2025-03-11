@@ -1,0 +1,197 @@
+body {
+  margin: auto;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  background-color: lightgray;
+  /* flex-wrap: wrap; */
+}
+
+.main_menu {
+  text-align: center;
+  /* padding-top: 10px; */
+  position: relative;
+  /* flex-wrap: wrap; */
+  background-image: url(images/vadringjag.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 110px;
+}
+
+.main_menu h2 {
+  color: white;
+  padding: 0px;
+}
+
+.main_menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  scroll-padding-inline: 0px;
+}
+
+.main_menu a {
+  text-decoration: none;
+  float: none;
+  padding: 10px 10px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  transition: bakground 0.3s;
+  -webkit-transition: bakground 0.3s;
+  -moz-transition: bakground 0.3s;
+  -ms-transition: bakground 0.3s;
+  -o-transition: bakground 0.3s;
+}
+
+/* hover parten, dont touch */
+.main_menu a:hover {
+  background: rgb(208, 224, 219);
+  color: black;
+}
+
+.main_menu img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container h2 {
+  color: dimgrey;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%; /*automatisk läge som fyller sin container*/
+  max-width: 200px; /*sätter en max bredd på bilder*/
+  border-radius: 10px; /*rundar till hörnen*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* easter egg */
+header {
+  text-align: center;
+  grid-row: 1;
+  grid-column: 1/3;
+}
+
+.boom {
+  position: absolute;
+  bottom: 35%;
+  left: -200px;
+  width: 200px;
+  height: 200px;
+  /* background-image: url("pixel\ explosion.gif"); */
+  background-size: cover;
+  /* animation: crash 6s linear forwards;
+  -webkit-animation: crash 6s linear forwards; */
+  display: none;
+}
+
+.crash-animation {
+  display: block;
+  animation: crash 6s linear forwards;
+  -webkit-animation: crash 6s linear forwards;
+}
+
+/* popup */
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 100vw;
+  height: 150px;
+  background: rgba(80, 79, 79, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .popup.hide {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+/* makes it shake */
+/* body {
+  animation: break 6s ease-in-out;
+  -webkit-animation: break 6s ease-in-out;
+} */
+
+@keyframes crash {
+  0% {
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+
+    background-image: url(Art\ Pixel\ Sticker\ by\ Otter\ Student\ Union.gif);
+  }
+  49% {
+    background-image: url(Art\ Pixel\ Sticker\ by\ Otter\ Student\ Union.gif);
+  }
+
+  50% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+
+    background-image: url(pixel\ explosion.gif);
+  }
+
+  60% {
+    background-image: url(pixel\ explosion.gif);
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes break {
+  50% {
+    rotate: 0deg;
+  }
+  52% {
+    rotate: 1deg;
+  }
+  58% {
+    rotate: -2deg;
+  }
+  60% {
+    rotate: 6deg;
+  }
+}
