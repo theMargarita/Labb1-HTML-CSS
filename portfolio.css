@@ -4,7 +4,7 @@ body {
   font-optical-sizing: auto;
   background-color: lightgrey;
   /* flex-wrap: wrap; */
-  display: flexbox;
+  /* display: flexbox; */
 }
 
 .main_menu {
@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 100px 0;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .main_menu h2 {
@@ -88,8 +88,13 @@ h1 {
   color: #333;
   text-align: center;
 }
-dialog {
-  padding: 1rem 3rem;
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 90px;
+  margin: 100px;
   background: rgb(174, 206, 243);
   max-width: 400px;
   padding-top: 2rem;
@@ -99,7 +104,7 @@ dialog {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   border: 0;
-  /* box-shadow: 0 5px 30px 0 rgba(161, 25, 25, 0.1); */
+  box-shadow: 9px 5px 30px 0 rgba(5, 5, 5, 0.1);
   animation: fadeIn 1s ease both;
   -webkit-animation: fadeIn 1s ease both;
   &::backdrop {
@@ -109,45 +114,105 @@ dialog {
     z-index: 2;
     backdrop-filter: blur(20px);
   }
-  .x {
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    border: none;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    transition: ease filter, transform 0.3s;
-    -webkit-transition: ease filter, transform 0.3s;
-    -moz-transition: ease filter, transform 0.3s;
-    -ms-transition: ease filter, transform 0.3s;
-    -o-transition: ease filter, transform 0.3s;
+}
 
-    cursor: pointer;
-    transform-origin: center;
-    &:hover {
-      filter: grayscale(0);
-      -webkit-filter: grayscale(0);
-      transition: scale(1.1);
-      -webkit-transition: scale(1.1);
-      -moz-transition: scale(1.1);
-      -ms-transition: scale(1.1);
-      -o-transition: scale(1.1);
-    }
-  }
-  p {
-    font-size: 1rem;
-    line-height: 1.3rem;
-    padding: 0.5rem 0;
-    margin-bottom: 20px;
-    a {
-      &:visited {
-        color: rgb(var(--vs-primary)); /*visar bakgrudnen i en blurr*/
-      }
-    }
+/* Popup-text */
+/* #popup h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+#popup p {
+  font-size: 16px;
+  color: #555;
+}
+
+#popup a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+} */
+
+/* #popup a:hover {
+  background: #0056b3;
+} */
+
+/* .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+} */
+
+/* .popupContent {
+  display: contents;
+  padding: 40px;
+  margin-top: auto;
+} */
+
+#github-repos {
+  max-width: 400px;
+  margin: 20px auto;
+  background: rgb(171, 177, 180);
+  padding: 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.repo-list {
+  list-style: none;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.buttonOpen {
+  display: inline-block;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  background: #63a0d8;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.15);
+}
+.buttonOpen:hover {
+  background: #70dff3;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 100%);
+  &:hover {
+    box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+    transform: translate(-5px);
+    -webkit-transform: translate(-5px);
+    -moz-transform: translate(-5px);
+    -ms-transform: translate(-5px);
+    -o-transform: translate(-5px);
   }
 }
 
-button.button {
+.closeBTN {
   display: inline-block;
   font-size: 0.8rem;
   background-color: cadetblue;
@@ -178,6 +243,13 @@ button.button {
     -o-transform: translate(-5px);
   }
 }
+.Close {
+  color: rgb(148, 12, 12);
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 @keyframes fadeIn {
   from {
@@ -188,17 +260,28 @@ button.button {
   }
 }
 
-.x {
-  color: rgb(148, 12, 12);
-  float: right;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* @keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+} */
 
 @media (max-width: 768px) {
   main {
     flex-direction: column;
     align-items: center;
   }
+}
+
+footer p {
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
+  margin-bottom: 20px;
 }

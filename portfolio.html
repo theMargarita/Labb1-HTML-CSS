@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height, initial-scale=1.0"
+    />
     <title>Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <link
@@ -27,77 +30,23 @@
 
     <main>
       <section>
-        <h1>Projects</h1>
-        <!-- projekt del1 -->
-        <div class="container">
-          <h2>Fictive School</h2>
-
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Explicabo quo esse libero laudantium voluptatibus blanditiis.
-            Dolorum similique eius expedita quam et laudantium. Sed incidunt
-            praesentium aspernatur, perspiciatis at velit molestias?
-          </p>
-          <button class="button" onclick="document.getElementById('dialogOne').showModal();">
-            More info
-          </button>
-
-          <dialog id="dialogOne">
-            <p>
-              This project involves creating a database for a fictive school and
-              using C# to build a system for adding and searching for people in
-              the database.
-              <a
-                href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
-                target="_blank"
-                ::backdrop
-              ></a>
-           
-            </p>
-          <button onclick="document.getElementById('dialogOne').close();" aria-label="close" class="x"> X </button>
-</dialog>
-
-          <p>
-            <a href="https://github.com/theMargarita/Individual_Database_project"
-            >GitHub</a>
-          </p>
-            </div>
-          </div>
+        <h1>Repositories from github</h1>
+        <div id="github-repos">
+          <p>Fetching the Repositories</p>
         </div>
 
-        <!-- projekt 2 -->
-        <div class="container">
-          <h2>Numbers Game</h2>
-
-          <p>A numbers game made in visual studio for a school project.</p>
-
-          <button class="button" onclick="document.getElementById('dialogTwo').showModal();">
-            More info
-          </button>
-
-          <dialog id="dialogTwo">
-            <p>
-              This project involves creating a database for a fictive school and
-              using C# to build a system for adding and searching for people in
-              the database.
-              <a
-                href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
-                target="_blank"
-                ::backdrop
-              ></a>
-            </p> <button onclick="document.getElementById('dialogTwo').close();" aria-label="close" class="x">X</button> 
-</dialog>
-          <p><a href="https://github.com/theMargarita/NumbersGame">GitHub</a></p>
-              <p>
-                A number game where you guess the number and you have 5 moves to
-                guess right, else you loose.
-              </p>
-            </div>
-          </div>
+        <div id="popup" style="display: none">
+          <!-- <div class="popupContent"> -->
+          <ul class="repo-name"></ul>
+          <p id="popupDescription">Fetching the description, please wait</p>
+          <h2 id="popupTitle">Loading, please wait</h2>
+          <a id="popupLink" href="#" target="_blank">Go to github</a>
+          <!-- </div> -->
+          <span class="closeBTN">Close</span>
         </div>
       </section>
     </main>
-
+    <script src="portfolio.js"></script>
     <footer>
       <p>&copy; 2025 Margarita Voistinova</p>
     </footer>
