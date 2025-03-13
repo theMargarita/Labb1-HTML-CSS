@@ -1,46 +1,39 @@
 const closeBTN = document.querySelector(".closeBTN");
+const secretBTN = document.querySelector(".secretBTN");
+const container = document.querySelector(".eggContainer");
+const popup = document.getElementById("eggPopup"); // Target the popup by ID
 
-let container = document.querySelector(".eggContainer");
-container.addEventListener("click", () => {
-  document.querySelector(".top").style.top = "-100px";
-});
-
-container.addEventListener =
-  ("mouseover",
-  () => {
-    document.getElementsByClassName("curve-right")[0].style.opacity == 1;
-    document.getElementsByClassName("curve-right")[1].style.opacity == 1;
-    document.getElementsByClassName("curve-left")[0].style.opacity == 1;
-    document.getElementsByClassName("curve-left")[1].style.opacity == 1;
+// Event listener for opening the popup
+if (secretBTN) {
+  secretBTN.addEventListener("click", () => {
+    popup.classList.add("show"); // Add "show" class to display the popup
   });
-
-container.addEventListener =
-  ("mouseleave",
-  () => {
-    document.getElementsByClassName("curve-right")[0].style.opacity == 0;
-    document.getElementsByClassName("curve-right")[1].style.opacity == 0;
-    document.getElementsByClassName("curve-left")[0].style.opacity == 0;
-    document.getElementsByClassName("curve-left")[1].style.opacity == 0;
-  });
-
-function showPopup() {
-  document.getElementById("eggPopup").classList.add("show");
 }
 
-function closePopup() {
-  document.getElementById("eggPopup").classList.remove("show");
+// Event listener for closing the popup
+if (closeBTN) {
+  closeBTN.addEventListener("click", () => {
+    popup.classList.remove("show"); // Remove "show" class to hide the popup
+  });
 }
 
-// document.addEventListener("keydown", function (event) {
-//   if (event.key.toLowerCase() === "e") {
-//     showPopup();
-//   }
-// });
+// Other event listeners on container for "mouseover" and "mouseleave" effects
+if (container) {
+  container.addEventListener("click", () => {
+    document.querySelector(".top").style.top = "-100px";
+  });
 
-document.addEventListener("click", function (event) {
-  showPopup();
-});
+  container.addEventListener("mouseover", () => {
+    document.getElementsByClassName("curve-right")[0].style.opacity = 1;
+    document.getElementsByClassName("curve-right")[1].style.opacity = 1;
+    document.getElementsByClassName("curve-left")[0].style.opacity = 1;
+    document.getElementsByClassName("curve-left")[1].style.opacity = 1;
+  });
 
-closeBTN.addEventListener("click", () => {
-  closePopup();
-});
+  container.addEventListener("mouseleave", () => {
+    document.getElementsByClassName("curve-right")[0].style.opacity = 0;
+    document.getElementsByClassName("curve-right")[1].style.opacity = 0;
+    document.getElementsByClassName("curve-left")[0].style.opacity = 0;
+    document.getElementsByClassName("curve-left")[1].style.opacity = 0;
+  });
+}

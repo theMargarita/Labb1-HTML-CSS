@@ -4,6 +4,7 @@ body {
   font-optical-sizing: auto;
   background-color: lightgray;
   /* flex-wrap: wrap; */
+  background-attachment: fixed;
 }
 
 .main_menu {
@@ -92,25 +93,6 @@ header {
   grid-column: 1/3;
 }
 
-/* .boom { */
-/* position: absolute;
-  bottom: 35%;
-  left: -200px;
-  width: 200px;
-  height: 200px; */
-/* background-image: url("pixel\ explosion.gif"); */
-/* background-size: cover; */
-/* animation: crash 6s linear forwards;
-  -webkit-animation: crash 6s linear forwards; */
-/* display: none; */
-/* } */
-
-/* .crash-animation {
-  display: block;
-  animation: crash 6s linear forwards;
-  -webkit-animation: crash 6s linear forwards;
-} */
-
 /* popup */
 .popup {
   position: fixed;
@@ -138,60 +120,3 @@ header {
   opacity: 1;
   visibility: visible;
 }
-
-/* .popup.hide {
-  opacity: 0;
-  pointer-events: none;
-} */
-
-/* makes it shake */
-/* body {
-  animation: break 6s ease-in-out;
-  -webkit-animation: break 6s ease-in-out;
-} */
-
-/* @keyframes crash {
-  0% {
-    transform: translateX(-100vw);
-    -webkit-transform: translateX(-100vw);
-    -moz-transform: translateX(-100vw);
-    -ms-transform: translateX(-100vw);
-    -o-transform: translateX(-100vw);
-
-    background-image: url(Art\ Pixel\ Sticker\ by\ Otter\ Student\ Union.gif);
-  }
-  49% {
-    background-image: url(Art\ Pixel\ Sticker\ by\ Otter\ Student\ Union.gif);
-  }
-
-  50% {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-
-    background-image: url(pixel\ explosion.gif);
-  }
-
-  60% {
-    background-image: url(pixel\ explosion.gif);
-  }
-  100% {
-    background-image: none;
-  }
-} */
-/* @keyframes break {
-  50% {
-    rotate: 0deg;
-  }
-  52% {
-    rotate: 1deg;
-  }
-  58% {
-    rotate: -2deg;
-  }
-  60% {
-    rotate: 6deg;
-  }
-} */

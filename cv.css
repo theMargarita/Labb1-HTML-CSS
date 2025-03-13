@@ -3,6 +3,7 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   background-color: lightgrey;
+  background-attachment: fixed;
 }
 
 .main_menu {

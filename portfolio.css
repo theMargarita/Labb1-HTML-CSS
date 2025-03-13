@@ -116,52 +116,6 @@ h1 {
   }
 }
 
-/* Popup-text */
-/* #popup h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #007bff;
-}
-
-#popup p {
-  font-size: 16px;
-  color: #555;
-}
-
-#popup a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-} */
-
-/* #popup a:hover {
-  background: #0056b3;
-} */
-
-/* .popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-} */
-
-/* .popupContent {
-  display: contents;
-  padding: 40px;
-  margin-top: auto;
-} */
-
 #github-repos {
   max-width: 400px;
   margin: 20px auto;
@@ -259,18 +213,6 @@ h1 {
     opacity: 1;
   }
 }
-
-/* @keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translate(-50%, -60%);
-  }
-
-  to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-  }
-} */
 
 @media (max-width: 768px) {
   main {

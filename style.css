@@ -5,6 +5,7 @@ body {
   background-color: lightgray;
   /* flex-wrap: wrap; */
   scroll-padding-inline: none;
+  background-attachment: fixed;
 }
 
 .main_menu {
@@ -325,6 +326,20 @@ footer p {
   visibility: visible;
 }
 
+.secretBTN {
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  margin-top: 100px;
+  padding: 10px 20px;
+  background: lightgray;
+  color: lightgray;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
 /* Close Button */
 .closeBTN {
   margin-top: 100px;
@@ -336,7 +351,6 @@ footer p {
   border-radius: 10px;
   font-size: 16px;
 }
-
 .closeBTN:hover {
   background: #ff1a1a;
 }
