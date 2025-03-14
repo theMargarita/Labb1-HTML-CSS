@@ -3,7 +3,6 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   background-color: lightgray;
-  /* flex-wrap: wrap; */
   background-attachment: fixed;
 }
 
@@ -11,7 +10,7 @@ body {
   text-align: center;
   /* padding-top: 10px; */
   position: relative;
-  /* flex-wrap: wrap; */
+  gap: 10px;
   background-image: url(images/vadringjag.jpg);
   background-size: cover;
   background-position: center;
@@ -31,7 +30,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  scroll-padding-inline: 0px;
+  /* scroll-padding-inline: 0px; */
 }
 
 .main_menu a {
